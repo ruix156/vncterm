@@ -1,0 +1,18 @@
+基于https://git.proxmox.com/?p=vncterm.git修改
+
+编译&安装 方法:
+apt install -y dpkg-dev unifont quilt automake libtool libsysfs-dev zlib1g-dev libvncserver-dev gtk+-2.0 libpng-dev libjpeg-dev cmake && make && mkdir /usr/share/vncterm && cp font.data /usr/share/vncterm/ && cp vncterm /usr/bin/ && chmod +x /usr/bin/vncterm
+
+选项:
+-rfbport 5900 #监听端口
+-height 800 #VNC窗口高度(一般无需关注)
+-width 400 #VNC窗口宽度(一般无需关注)
+-timeout 0 #无连接超时时间
+-vncticket 'FREEfree01' #VNC密码
+-listen 0.0.0.0 #VNC监听地址
+-c /bin/login #VNC默认执行的命令
+
+示例:
+vncterm -rfbport 5900 -timeout 0 -vncticket 'testpass' -listen 0.0.0.0 -c /bin/login -f root
+
+其他说明参见https://git.proxmox.com/?p=vncterm.git;a=blob;f=README
