@@ -15,4 +15,7 @@ apt install -y dpkg-dev unifont quilt automake libtool libsysfs-dev zlib1g-dev l
 示例:
 vncterm -rfbport 5900 -timeout 0 -vncticket 'testpass' -listen 0.0.0.0 -c /bin/login -f root
 
+在其他非Debian平台使用已经编译好的二进制之前,需要先进行如下配置:
+待编写....
+
 其他说明参见https://git.proxmox.com/?p=vncterm.git;a=blob;f=README
